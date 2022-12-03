@@ -29,8 +29,6 @@ function playRound(playerAnswer, computerAnswer) {
         computerWon = computerWon + 1; 
     } else if (playerAnswer === computerAnswer){
         console.log("Tie!");
-    } else {
-        alert("Invalid answer. Try again.");
     }
 }
 
@@ -38,14 +36,20 @@ function game(){
     for (let i = 1; i <= 5; i++){
         computerAnswer = computerPlay();
         let answerPrompt = prompt("Rock, paper or scissors?");
-        let playerAnswer = answerPrompt.toLowerCase();
-        playRound(playerAnswer, computerAnswer);
-        if (playerWon === 3){
-            console.log("You won 3 out of 5 games! Game over.");
-            break;
-        } else if (computerWon === 3){
-            console.log("Computer won 3 out of 5 games! Game over.");
-            break;
+        let playerAnswer = answerPrompt.toLowerCase().trim();
+        if (playerAnswer === "rock" || playerAnswer === "paper" || playerAnswer === "scissors"){
+            playRound(playerAnswer, computerAnswer);    
+            if (playerWon === 3){
+                console.log("You won 3 out of 5 games! Game over.");
+                break;
+            } else if (computerWon === 3){
+                console.log("Computer won 3 out of 5 games! Game over.");
+                break;
+            }
+        }
+        else {
+            alert("Invalid answer. Try again.");
+            i--;
         }
     }
     if (playerWon > computerWon){
