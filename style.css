@@ -11,8 +11,10 @@ button{
     box-shadow: 0 10px #999999;
     border-radius: 5%;
     margin: 20px;
+    border-width: 5px;
+    border-color: #4ECCA3;
 }
-body{
+body, button{
     background-color: #393E46;
 }
 h1{
