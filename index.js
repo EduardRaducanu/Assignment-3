@@ -12,12 +12,7 @@ document.getElementById('rock').addEventListener('click', function(){
     let playerAnswer = 'rock';
     function game(){
         computerAnswer = computerPlay();
-            playRound(playerAnswer, computerAnswer);    
-            // if (playerWon === 3){
-            //     alert("You won 3 out of 5 games! Game over.");
-            // } else if (computerWon === 3){
-            //     alert("Computer won 3 out of 5 games! Game over.");
-            // }
+        playRound(playerAnswer, computerAnswer);    
     };
     game();
 });
@@ -25,12 +20,7 @@ document.getElementById('paper').addEventListener('click', function(){
     let playerAnswer = 'paper';
     function game(){
         computerAnswer = computerPlay();
-            playRound(playerAnswer, computerAnswer);    
-            // if (playerWon === 3){
-            //     alert("You won 3 out of 5 games! Game over.");
-            // } else if (computerWon === 3){
-            //     alert("Computer won 3 out of 5 games! Game over.");
-            // }
+        playRound(playerAnswer, computerAnswer);    
     };
     game(); 
 });
@@ -38,12 +28,7 @@ document.getElementById('scissors').addEventListener('click', function(){
     let playerAnswer = 'scissors';
     function game(){
         computerAnswer = computerPlay();
-            playRound(playerAnswer, computerAnswer);    
-                // if (playerWon === 3){
-                //     alert("You won 3 out of 5 games! Game over.");
-                // } else if (computerWon === 3){
-                //     alert("Computer won 3 out of 5 games! Game over.");
-                // }
+        playRound(playerAnswer, computerAnswer);    
     };
     game(); 
 });
@@ -77,11 +62,3 @@ function playRound(playerAnswer, computerAnswer){
         document.querySelector('h1').innerHTML = "Tie!";
     };
 };
-
-// if (playerWon > computerWon){
-            //     alert("You won!");
-            // } else if (playerWon < computerWon){
-            //     alert("Computer won!");
-            // } else if (playerWon === computerWon){
-            //     alert("It's a tie!");
-            // }
